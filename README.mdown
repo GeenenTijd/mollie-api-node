@@ -58,7 +58,7 @@ Mollie.payments.create({
     description: "My first API payment",
     redirectUrl: "https://webshop.example.org/order/12345/"
 },  function (err, payment) {
-    response.writeHead(302, { Location: payment.getPaymentUrl() })
+    response.writeHead(302, { Location: payment.links.paymentUrl })
 });
 ```
 
