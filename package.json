@@ -19,18 +19,22 @@
     "payments",
     "gateway"
   ],
-  "dependencies": {
-    "underscore": "~1.7.0"
-  },
   "devDependencies": {
-    "coffee-script": "~1.8.0"
+    "assert": "1.x.x",
+    "eslint": "3.x.x",
+    "eslint-config-google": "0.x.x",
+    "lab": "10.x.x",
+    "opn-cli": "3.x.x"
   },
-  "main": "./lib/mollie",
   "repository": "git://github.com/mollie/mollie-api-node",
+  "main": "server.js",
   "scripts": {
-    "prepublish": "npm prune"
+    "lint": "eslint ./lib/*.js",
+    "test": "lab -L",
+    "coverage": "lab -c -r html -o ./coverage/index.html",
+    "postcoverage": "opn ./coverage/index.html"
   },
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 4.0.0"
   }
 }
