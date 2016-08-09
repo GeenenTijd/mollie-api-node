@@ -8,11 +8,11 @@ Request.setVersion(require('./package.json').version);
 module.exports = {
   setApiEndpoint: Request.setApiEndpoint,
   setApiKey: Request.setApiKey,
-  Customers: require('./lib/customers'),
-  Issuers: require('./lib/issuers'),
-  Mandates: require('./lib/mandates'),
-  Methods: require('./lib/methods'),
-  Payments: require('./lib/payments'),
-  Refunds: require('./lib/refunds'),
-  Subscriptions: require('./lib/subscriptions')
+  customers: require('./lib/customers'),
+  issuers: require('./lib/issuers'),
+  mandates: require('./lib/mandates'),
+  methods: require('./lib/methods'),
+  payments: require('./lib/payments'),
+  refunds: require('./lib/refunds'),
+  subscriptions: require('./lib/subscriptions')
 };
